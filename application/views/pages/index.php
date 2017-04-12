@@ -3,7 +3,7 @@
   <div class="col-sm-2">
     <img src="<?php echo base_url(); ?>assets/images/biztonsag_minden_napra.png" alt="biztonsag_minden_napra"/>
     Biztosítási esemény
-  </div>margin-left: 40px;
+  </div>
   <div class="col-sm-2">
     <img src="<?php echo base_url(); ?>assets/images/biztonsag_minden_napra.png" alt="biztonsag_minden_napra"/>
     Kárrendezés
