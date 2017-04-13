@@ -11,6 +11,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     }
 
     public function insurance(){
+      $this->load->helper('form');
       $this->load->view('templates/header');
       $this->load->view('pages/new_insurance');
       $this->load->view('templates/footer');
