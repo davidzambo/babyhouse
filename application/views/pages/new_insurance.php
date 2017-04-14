@@ -1,3 +1,4 @@
+<script src="<?php echo base_url(); ?>assets/js/formvalidation.js"></script>
 <div class="row">
   <div class="col-lg-2"></div>
   <div class="col-lg-8">
@@ -8,7 +9,7 @@
   <div class="form-group row">
     <label for="person_title" class="col-lg-5 control-label">Biztosított <strong>megszólítása</strong>:</label>
     <div class="col-lg-3">
-      <select class="form-control" id="person_title">
+      <select class="form-control" id="personal_title">
         <option value="default">Kérem válasszon!</option>
         <option value="holgyem">Hölgyem</option>
         <option value="uram">Uram</option>
@@ -141,8 +142,8 @@
   </div>
 
   <div class="form-group row">
-    <label for="data_check" class="col-lg-5 control-label">Kérem <strong>ellenőrizze az adatokat</strong>:</label>
-    <div class="col-lg-6 data_check">
+    <label for="data-check" class="col-lg-5 control-label">Kérem <strong>ellenőrizze az adatokat</strong>:</label>
+    <div class="col-lg-6 data-check">
         <p>Megszólítás:</p>
         <p>Vezetéknév:</p>
         <p>Keresztnév:</p>
@@ -154,6 +155,7 @@
         <p>Fogazat kvadráns:</p>
         <p>Kezelés típusa:</p>
     </div>
+    <button type="submit" class="button" id="submit">A bevitt adatok helyesek</button>
     <div class="col-lg-1"></div>
   </div>
 
