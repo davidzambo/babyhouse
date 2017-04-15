@@ -21,7 +21,7 @@
   <div class="form-group row">
     <label for="last_name" class="col-lg-5 control-label">Biztosított <strong>vezetékneve</strong>:</label>
       <div class="col-lg-4">
-        <input type="text" class="form-control" id="last_name" placeholder="Vezetéknév">
+        <input type="text" class="form-control" id="last_name" placeholder="Vezetéknév" disabled="true">
       </div>
       <div class="col-lg-3"></div>
   </div>
@@ -29,17 +29,17 @@
   <div class="form-group row">
     <label for="first_name" class="col-lg-5 control-label">Biztosított <strong>keresztneve</strong>:</label>
       <div class="col-lg-4">
-        <input type="text" class="form-control" id="first_name" placeholder="Keresztnév">
+        <input type="text" class="form-control" id="first_name" placeholder="Keresztnév" disabled="true">
       </div>
       <div class="col-lg-3"></div>
   </div>
 
   <div class="form-group row">
-    <label for="birth_date" class="col-lg-5 control-label">Biztosított <strong>születési ideje</strong>:</label>
+    <label for="birth_date" class="col-lg-5 control-label">Biztosított <strong>születési ideje</strong></label>
       <div class="col-lg-7">
-        <input type="text" class="form-control" id="birth_date_year" placeholder="Év" maxlength="4" size="4">
-        <input type="text" class="form-control" id="birth_date_month" placeholder="Hónap" maxlength="2" size="4">
-        <input type="text" class="form-control" id="birth_date_day" placeholder="Nap" maxlength="2" size="2">
+        <input type="text" class="form-control" id="birth_date_year" placeholder="Év" maxlength="4" size="4" disabled="true">
+        <input type="text" class="form-control" id="birth_date_month" placeholder="Hónap" maxlength="2" size="4" disabled="true">
+        <input type="text" class="form-control" id="birth_date_day" placeholder="Nap" maxlength="2" size="2" disabled="true">
       </div>
   </div>
 
@@ -47,7 +47,7 @@
     <label for="country_select" class="col-lg-5 control-label">A biztosított
       <strong>tartózkodás szerinti országa</strong>:</label>
       <div class="col-lg-4">
-        <select class="form-control" id="person_title">
+        <select class="form-control" id="country_select" disabled="true">
           <option value="default">Kérem válasszon!</option>
           <option value="magyarorszag">Magyarország</option>
           <option value="ausztria">Ausztria</option>
@@ -87,16 +87,16 @@
   <div class="form-group row">
     <label for="treatment_date" class="col-lg-5 control-label">A <strong>kezelési terv dátuma</strong>:</label>
       <div class="col-lg-7">
-        <input type="text" class="form-control" id="treatment_date_year" placeholder="Év" maxlength="4" size="4">
-        <input type="text" class="form-control" id="treatment_date_month" placeholder="Hónap" maxlength="2" size="4">
-        <input type="text" class="form-control" id="treatment_date_day" placeholder="Nap" maxlength="2" size="2">
+        <input type="text" class="form-control" id="treatment_date_year" placeholder="Év" maxlength="4" size="4" disabled="true">
+        <input type="text" class="form-control" id="treatment_date_month" placeholder="Hónap" maxlength="2" size="4" disabled="true">
+        <input type="text" class="form-control" id="treatment_date_day" placeholder="Nap" maxlength="2" size="2" disabled="true">
       </div>
   </div>
 
   <div class="form-group row">
     <label for="treatment_id" class="col-lg-5 control-label">A kezelési terv <strong>azonosító száma</strong>:</label>
       <div class="col-lg-4">
-        <input type="text" class="form-control" id="treatment_id" placeholder="Azonosítós szám">
+        <input type="text" class="form-control" id="treatment_id" placeholder="Azonosítós szám" disabled="true">
       </div>
       <div class="col-lg-3"></div>
   </div>
@@ -104,9 +104,9 @@
   <div class="form-group row">
     <label for="treatment_finish_date" class="col-lg-5 control-label">A kezelés <strong>befejezésének dátuma</strong>:</label>
     <div class="col-lg-7">
-      <input type="text" class="form-control" id="treatment_finish_date_year" placeholder="Év" maxlength="4" size="4">
-      <input type="text" class="form-control" id="treatment_finish_date_month" placeholder="Hónap" maxlength="2" size="4">
-      <input type="text" class="form-control" id="treatment_finish_date_day" placeholder="Nap" maxlength="2" size="2">
+      <input type="text" class="form-control" id="treatment_finish_date_year" placeholder="Év" maxlength="4" size="4" disabled="true">
+      <input type="text" class="form-control" id="treatment_finish_date_month" placeholder="Hónap" maxlength="2" size="4" disabled="true">
+      <input type="text" class="form-control" id="treatment_finish_date_day" placeholder="Nap" maxlength="2" size="2" disabled="true">
     </div>
 </div>
 
@@ -114,12 +114,12 @@
   <div class="form-group row">
     <label for="tooth_quadrant" class="col-lg-5 control-label">Kérem adja meg a <strong>fogazott kvadránst</strong>:</label>
     <div class="checkbox col-lg-2">
-       <label><input type="checkbox" id="quadrant_top_left">Bal felső</label><br/>
-       <label><input type="checkbox" id="quadrant_bottom_left">Bal alsó</label>
+       <label><input type="checkbox" id="quadrant_top_left" disabled="true">Bal felső</label><br/>
+       <label><input type="checkbox" id="quadrant_bottom_left" disabled="true">Bal alsó</label>
     </div>
     <div class="checkbox col-lg-2">
-       <label><input type="checkbox" id="quadrant_top_right">Jobb felső</label><br/>
-       <label><input type="checkbox" id="quadrant_bottom_right">Jobb alsó</label>
+       <label><input type="checkbox" id="quadrant_top_right" disabled="true">Jobb felső</label><br/>
+       <label><input type="checkbox" id="quadrant_bottom_right" disabled="true">Jobb alsó</label>
     </div>
     <div class="col-lg-3"></div>
   </div>
@@ -127,16 +127,16 @@
   <div class="form-group row">
     <label for="treatment_type" class="col-lg-5 control-label">Kérem adja meg a <strong>kezelés típusát</strong>:</label>
     <div class="checkbox col-lg-5">
-      <label><input type="checkbox" id="treatment_implant">Implantátumok</label><br/>
-      <label><input type="checkbox" id="treatment_crowns">Koronák és hidak</label><br/>
-      <label><input type="checkbox" id="treatment_inlay">Inlay/onlay</label><br/>
-      <label><input type="checkbox" id="treatment_veneers">Kerámia héjak</label><br/>
-      <label><input type="checkbox" id="treatment_partial_dentures">Részleges fogsor és műfogsorok</label><br/>
-      <label><input type="checkbox" id="treatment_removable_dentures">Kivehető műfogsor</label><br/>
-      <label><input type="checkbox" id="treatment_complete_dentures">Teljes fogsor, fix fogszabályzós</label><br/>
-      <label><input type="checkbox" id="treatment_composite_fillings">Kompozit tömések</label><br/>
-      <label><input type="checkbox" id="treatment_ot_cap">Ot-Cap, Preci, és egyéb összekötő elem</label><br/>
-      <label><input type="checkbox" id="treatment_other">Egyéb módon történő kezelés</label><br/>
+      <label><input type="checkbox" id="treatment_implant" disabled="true">Implantátumok</label><br/>
+      <label><input type="checkbox" id="treatment_crowns" disabled="true">Koronák és hidak</label><br/>
+      <label><input type="checkbox" id="treatment_inlay" disabled="true">Inlay/onlay</label><br/>
+      <label><input type="checkbox" id="treatment_veneers" disabled="true">Kerámia héjak</label><br/>
+      <label><input type="checkbox" id="treatment_partial_dentures" disabled="true">Részleges fogsor és műfogsorok</label><br/>
+      <label><input type="checkbox" id="treatment_removable_dentures" disabled="true">Kivehető műfogsor</label><br/>
+      <label><input type="checkbox" id="treatment_complete_dentures" disabled="true">Teljes fogsor, fix fogszabályzós</label><br/>
+      <label><input type="checkbox" id="treatment_composite_fillings" disabled="true">Kompozit tömések</label><br/>
+      <label><input type="checkbox" id="treatment_ot_cap" disabled="true">Ot-Cap, Preci, és egyéb összekötő elem</label><br/>
+      <label><input type="checkbox" id="treatment_other" disabled="true">Egyéb módon történő kezelés</label><br/>
     </div>
     <div class="col-lg-2"></div>
   </div>
