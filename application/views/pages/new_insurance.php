@@ -145,16 +145,16 @@
   <div class="form-group row data_check">
     <label for="data_check" class="col-lg-5 control-label">Kérem <strong>ellenőrizze az adatokat</strong>:</label>
     <div class="col-lg-6 data-check">
-        <span id="data_check_personal_title">Megszólítás:</span><br/>
-        <span id="data_check_last_name">Vezetéknév:</span><br/>
-        <span id="data_check_first_name">Keresztnév:</span><br/>
-        <span id="data_check_birth_date">Születési dátum:</span><br/>
-        <span id="date_check_country">Tartózkodási ország:</span><br/>
-        <span id="data_check_treatment_date">Kezelés tervezett dátuma:</span><br/>
-        <span id="data_check_treatment_id">Kezelés azonosítószáma:</span><br/>
-        <span id="data_check_treatment_finish_date">Kezelés befejezésének időpontja:</span><br/>
-        <span id="data_check_tooth_quadrant">Fogazat kvadráns:</span><br/>
-        <span id="data_check_treatment_type">Kezelés típusa:</span><br/>
+        <span>Megszólítás: </span><span id="data_check_personal_title"></span><br/>
+        <span>Vezetéknév: </span><span id="data_check_last_name"></span><br/>
+        <span>Keresztnév: </span><span id="data_check_first_name"></span><br/>
+        <span>Születési dátum: </span><span id="data_check_birth_date"></span><br/>
+        <span>Tartózkodási ország: </span><span id="data_check_country"></span><br/>
+        <span>Kezelés tervezett dátuma: </span><span id="data_check_treatment_date"></span><br/>
+        <span>Kezelés azonosítószáma: </span><span id="data_check_treatment_id"></span><br/>
+        <span>Kezelés befejezésének időpontja: </span><span id="data_check_treatment_finish_date"></span><br/>
+        <span>Fogazat kvadráns: </span><span id="data_check_tooth_quadrant"></span><br/>
+        <span>Kezelés típusa: </span><span id="data_check_treatment_type"></span><br/>
     </div>
     <button type="submit" class="button" id="data_check_button" disabled="true">A bevitt adatok helyesek</button>
     <div class="col-lg-1"></div>

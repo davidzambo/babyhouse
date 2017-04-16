@@ -6,6 +6,7 @@ $(document).ready(function(){
       $("#last_name").prop('disabled', true);
     } else {
       $('.personal_title').addClass('form-success').removeClass('form-error');
+      $('#data_check_personal_title').text($('#personal_title option:selected').text());
       $("#last_name").prop('disabled', false);
     };
   });
@@ -13,6 +14,7 @@ $(document).ready(function(){
   $('#last_name').on("keyup", function(){
     if (/^[a-zA-Z\-\.\sáÁéÉíÍóÓöÖőŐúÚüÜűŰ]{2,20}$/.test($(this).val())){
       $('.last_name').addClass('form-success').removeClass('form-error');
+      $('#data_check_last_name').text($(this).val());
       $("#first_name").prop('disabled', false);
     } else {
       $('.last_name').addClass('form-error').removeClass('form-success');
@@ -23,6 +25,7 @@ $(document).ready(function(){
   $('#first_name').on("keyup", function(){
     if (/^[a-zA-Z\-\.\sáÁéÉíÍóÓöÖőŐúÚüÜűŰ]{2,20}$/.test($(this).val())){
       $('.first_name').addClass('form-success').removeClass('form-error');
+      $('#data_check_first_name').text($(this).val());
       $("#birth_date_year").prop('disabled', false);
       $("#birth_date_month").prop('disabled', false);
       $("#birth_date_day").prop('disabled', false);
@@ -86,6 +89,8 @@ $(document).ready(function(){
         year > currentTime.getFullYear() - 90
       ){
       $('.birth_date').addClass('form-success').removeClass('form-error');
+      $('#data_check_birth_date').text(
+        $('#birth_date_year').val() +'. '+ $('#birth_date_month').val() +'. '+ $('#birth_date_day').val() + '.');
       $("#country_select").prop('disabled', false);
     } else {
       $('.birth_date').addClass('form-error').removeClass('form-success');
@@ -97,6 +102,7 @@ $(document).ready(function(){
   $("#country_select").on("change", function(){
     if ($(this).val() === "default") {
       $('.country_select').addClass('form-error').removeClass('form-success');
+      $('#data_check_country').text($('#country_select option:selected').text());
       $("#treatment_date_year").prop('disabled', true);
       $("#treatment_date_month").prop('disabled', true);
       $("#treatment_date_day").prop('disabled', true);
