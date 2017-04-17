@@ -102,12 +102,12 @@ $(document).ready(function(){
   $("#country_select").on("change", function(){
     if ($(this).val() === "default") {
       $('.country_select').addClass('form-error').removeClass('form-success');
-      $('#data_check_country').text($('#country_select option:selected').text());
       $("#treatment_date_year").prop('disabled', true);
       $("#treatment_date_month").prop('disabled', true);
       $("#treatment_date_day").prop('disabled', true);
     } else {
       $('.country_select').addClass('form-success').removeClass('form-error');
+      $('#data_check_country').text($('#country_select option:selected').text());
       $("#treatment_date_year").prop('disabled', false);
       $("#treatment_date_month").prop('disabled', false);
       $("#treatment_date_day").prop('disabled', false);
@@ -171,6 +171,8 @@ $(document).ready(function(){
         userGivenDate.getTime() > fiveYearsBeforeDate.getTime()
       ){
       $('.treatment_date').addClass('form-success').removeClass('form-error');
+      $('#data_check_treatment_date').text(
+        $('#treatment_date_year').val() +'. '+ $('#treatment_date_month').val() +'. '+ $('#treatment_date_day').val() + '.');
 //      $("#treatment_date_month").addClass('form-success').removeClass('form-error');
 //      $("#treatment_date_year").addClass('form-success').removeClass('form-error');
       $("#treatment_id_number").prop('disabled', false);
@@ -185,6 +187,7 @@ $(document).ready(function(){
   $('#treatment_id_number').on("keyup", function(){
     if (/^[\d]{5,20}$/.test($(this).val())){
       $('.treatment_id_number').addClass('form-success').removeClass('form-error');
+      $('#data_check_treatment_id_number').text($(this).val());
       $("#treatment_finish_date_year").prop('disabled', false);
       $("#treatment_finish_date_month").prop('disabled', false);
       $("#treatment_finish_date_day").prop('disabled', false);
@@ -249,6 +252,8 @@ $(document).ready(function(){
         userGivenDate.getTime() > currentTime.getTime()
       ){
       $('.treatment_finish_date').addClass('form-success').removeClass('form-error');
+      $('#data_check_treatment_finish_date').text(
+        $('#treatment_finish_date_year').val() +'. '+ $('#treatment_finish_date_month').val() +'. '+ $('#treatment_finish_date_day').val() + '.');
 //      $("#treatment_finish_date_month").addClass('form-success').removeClass('form-error');
 //      $("#treatment_finish_date_year").addClass('form-success').removeClass('form-error');
       $(".tooth_quadrant").prop('disabled', false);
@@ -263,6 +268,7 @@ $(document).ready(function(){
   $('.tooth_quadrant').on('change', function(){
     if ($('.tooth_quadrant:input:checkbox:checked').length > 0) {
       $(this).addClass('form-success').removeClass('form-error');
+      $('#data_check_tooth_quadrant').text($('.tooth_quadrant:input:checkbox:checked').val());
       $('.treatment_type').prop('disabled', false);
     } else {
       $(this).removeClass('form-success').addClass('form-error');

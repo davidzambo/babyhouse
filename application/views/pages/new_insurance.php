@@ -115,12 +115,12 @@
   <div class="form-group row tooth_quadrant">
     <label for="tooth_quadrant" class="col-lg-5 control-label">Kérem adja meg a <strong>fogazott kvadránst</strong>:</label>
     <div class="checkbox col-lg-2">
-       <label><input type="checkbox" class="tooth_quadrant" id="quadrant_top_left" disabled="true">Bal felső</label><br/>
-       <label><input type="checkbox" class="tooth_quadrant" id="quadrant_bottom_left" disabled="true">Bal alsó</label>
+       <label><input type="checkbox" class="tooth_quadrant" id="quadrant_top_left" disabled="true" value="bal felső">Bal felső</label><br/>
+       <label><input type="checkbox" class="tooth_quadrant" id="quadrant_bottom_left" disabled="true" value="bal alsó">Bal alsó</label>
     </div>
     <div class="checkbox col-lg-2">
-       <label><input type="checkbox" class="tooth_quadrant" id="quadrant_top_right" disabled="true">Jobb felső</label><br/>
-       <label><input type="checkbox" class="tooth_quadrant" id="quadrant_bottom_right" disabled="true">Jobb alsó</label>
+       <label><input type="checkbox" class="tooth_quadrant" id="quadrant_top_right" disabled="true" value="jobb felső">Jobb felső</label><br/>
+       <label><input type="checkbox" class="tooth_quadrant" id="quadrant_bottom_right" disabled="true" value="jobb alsó">Jobb alsó</label>
     </div>
     <div class="col-lg-3"></div>
   </div>
@@ -151,7 +151,7 @@
         <span>Születési dátum: </span><span id="data_check_birth_date"></span><br/>
         <span>Tartózkodási ország: </span><span id="data_check_country"></span><br/>
         <span>Kezelés tervezett dátuma: </span><span id="data_check_treatment_date"></span><br/>
-        <span>Kezelés azonosítószáma: </span><span id="data_check_treatment_id"></span><br/>
+        <span>Kezelés azonosítószáma: </span><span id="data_check_treatment_id_number"></span><br/>
         <span>Kezelés befejezésének időpontja: </span><span id="data_check_treatment_finish_date"></span><br/>
         <span>Fogazat kvadráns: </span><span id="data_check_tooth_quadrant"></span><br/>
         <span>Kezelés típusa: </span><span id="data_check_treatment_type"></span><br/>
