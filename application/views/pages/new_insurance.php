@@ -5,7 +5,7 @@
   <div class="col-lg-8">
 <?php echo validation_errors(); ?>
 <?php $attributes = array( 'class' => 'form-horizontal');
-      echo form_open('pages/insurance', $attributes); ?>
+      echo form_open('new_patient', $attributes); ?>
 <fieldset>
   <legend>Új biztosítási ajánlat rögzítése</legend>
 

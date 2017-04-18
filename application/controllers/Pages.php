@@ -32,6 +32,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         $this->load->view('pages/success');
         $this->load->view('templates/footer');
       }
+    }
 
-  }
+    public function new_patient(){
+      $this->insurances_model->set_insurance();
+    }
+
+
 }
