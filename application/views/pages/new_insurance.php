@@ -128,16 +128,16 @@
   <div class="form-group row treatment_type">
     <label for="treatment_type" class="col-lg-5 control-label">Kérem adja meg a <strong>kezelés típusát</strong>:</label>
     <div class="checkbox col-lg-5">
-      <label><input type="checkbox" class="treatment_type" id="treatment_implant" disabled="true">Implantátumok</label><br/>
-      <label><input type="checkbox" class="treatment_type" id="treatment_crowns" disabled="true">Koronák és hidak</label><br/>
-      <label><input type="checkbox" class="treatment_type" id="treatment_inlay" disabled="true">Inlay/onlay</label><br/>
-      <label><input type="checkbox" class="treatment_type" id="treatment_veneers" disabled="true">Kerámia héjak</label><br/>
-      <label><input type="checkbox" class="treatment_type" id="treatment_partial_dentures" disabled="true">Részleges fogsor és műfogsorok</label><br/>
-      <label><input type="checkbox" class="treatment_type" id="treatment_removable_dentures" disabled="true">Kivehető műfogsor</label><br/>
-      <label><input type="checkbox" class="treatment_type" id="treatment_complete_dentures" disabled="true">Teljes fogsor, fix fogszabályzós</label><br/>
-      <label><input type="checkbox" class="treatment_type" id="treatment_composite_fillings" disabled="true">Kompozit tömések</label><br/>
-      <label><input type="checkbox" class="treatment_type" id="treatment_ot_cap" disabled="true">Ot-Cap, Preci, és egyéb összekötő elem</label><br/>
-      <label><input type="checkbox" class="treatment_type" id="treatment_other" disabled="true">Egyéb módon történő kezelés</label><br/>
+      <label><input type="checkbox" class="treatment_type" id="treatment_implant" value="implantátumok" disabled="true">Implantátumok</label><br/>
+      <label><input type="checkbox" class="treatment_type" id="treatment_crowns" value="koronák és hidak" disabled="true">Koronák és hidak</label><br/>
+      <label><input type="checkbox" class="treatment_type" id="treatment_inlay" value="inlay/onlay" disabled="true">Inlay/onlay</label><br/>
+      <label><input type="checkbox" class="treatment_type" id="treatment_veneers" value="kerámia héjak" disabled="true">Kerámia héjak</label><br/>
+      <label><input type="checkbox" class="treatment_type" id="treatment_partial_dentures" value="részleges fogsor és műforgsor" disabled="true">Részleges fogsor és műfogsorok</label><br/>
+      <label><input type="checkbox" class="treatment_type" id="treatment_removable_dentures" value="kivehető műfogsor" disabled="true">Kivehető műfogsor</label><br/>
+      <label><input type="checkbox" class="treatment_type" id="treatment_complete_dentures" value="teljes fogsor, fix fogszabályzós" disabled="true">Teljes fogsor, fix fogszabályzós</label><br/>
+      <label><input type="checkbox" class="treatment_type" id="treatment_composite_fillings" value="kompozit tömések" disabled="true">Kompozit tömések</label><br/>
+      <label><input type="checkbox" class="treatment_type" id="treatment_ot_cap" value="ot-cap, preci, és egyéb összekötő elemek" disabled="true">Ot-Cap, Preci, és egyéb összekötő elem</label><br/>
+      <label><input type="checkbox" class="treatment_type" id="treatment_other" value="egyéb módon történő kezelés" disabled="true">Egyéb módon történő kezelés</label><br/>
     </div>
     <div class="col-lg-2"></div>
   </div>
@@ -145,16 +145,16 @@
   <div class="form-group row data_check">
     <label for="data_check" class="col-lg-5 control-label">Kérem <strong>ellenőrizze az adatokat</strong>:</label>
     <div class="col-lg-6 data-check">
-        <span>Megszólítás: </span><span id="data_check_personal_title"></span><br/>
-        <span>Vezetéknév: </span><span id="data_check_last_name"></span><br/>
-        <span>Keresztnév: </span><span id="data_check_first_name"></span><br/>
-        <span>Születési dátum: </span><span id="data_check_birth_date"></span><br/>
-        <span>Tartózkodási ország: </span><span id="data_check_country"></span><br/>
-        <span>Kezelés tervezett dátuma: </span><span id="data_check_treatment_date"></span><br/>
-        <span>Kezelés azonosítószáma: </span><span id="data_check_treatment_id_number"></span><br/>
-        <span>Kezelés befejezésének időpontja: </span><span id="data_check_treatment_finish_date"></span><br/>
-        <span>Fogazat kvadráns: </span><span id="data_check_tooth_quadrant"></span><br/>
-        <span>Kezelés típusa: </span><span id="data_check_treatment_type"></span><br/>
+        <span><strong>Megszólítás: </strong></span><span id="data_check_personal_title"></span><br/>
+        <span><strong>Vezetéknév: </strong></span><span id="data_check_last_name"></span><br/>
+        <span><strong>Keresztnév: </strong></span><span id="data_check_first_name"></span><br/>
+        <span><strong>Születési dátum: </strong></span><span id="data_check_birth_date"></span><br/>
+        <span><strong>Tartózkodási ország: </strong></span><span id="data_check_country"></span><br/>
+        <span><strong>Kezelés tervezett dátuma: </strong></span><span id="data_check_treatment_date"></span><br/>
+        <span><strong>Kezelés azonosítószáma: </strong></span><span id="data_check_treatment_id_number"></span><br/>
+        <span><strong>Kezelés befejezésének időpontja: </strong></span><span id="data_check_treatment_finish_date"></span><br/>
+        <span><strong>Fogazat kvadráns: </strong></span><span id="data_check_tooth_quadrant"></span><br/>
+        <span><strong>Kezelés típusa: </strong></span><span id="data_check_treatment_type"></span><br/>
     </div>
     <button type="submit" class="button" id="data_check_button" disabled="true">A bevitt adatok helyesek</button>
     <div class="col-lg-1"></div>

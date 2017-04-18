@@ -268,7 +268,18 @@ $(document).ready(function(){
   $('.tooth_quadrant').on('change', function(){
     if ($('.tooth_quadrant:input:checkbox:checked').length > 0) {
       $(this).addClass('form-success').removeClass('form-error');
-      $('#data_check_tooth_quadrant').text($('.tooth_quadrant:input:checkbox:checked').val());
+
+//echo the checked tooth quadrants to the user validation box
+        var checked_tooth_quadrants = $('.tooth_quadrant:input:checkbox:checked').map(function(){
+          return $(this).val();
+        }).get();
+
+//set the user validation box's value to empty
+        $('#data_check_tooth_quadrant').empty();
+        for (var i = 0; i < checked_tooth_quadrants.length; i++){
+          $('#data_check_tooth_quadrant').append(checked_tooth_quadrants[i] + ", ");
+        };
+
       $('.treatment_type').prop('disabled', false);
     } else {
       $(this).removeClass('form-success').addClass('form-error');
@@ -276,9 +287,22 @@ $(document).ready(function(){
     };
   });
 
+
   $('.treatment_type').on('change', function(){
     if ($('.treatment_type:input:checkbox:checked').length > 0) {
       $(this).addClass('form-success').removeClass('form-error');
+//echo the checked treatment types to the user validation box
+      var checked_treatment_types = $('.treatment_type:input:checkbox:checked').map(function(){
+        return $(this).val();
+      }).get();
+
+//set the user validation box's value to empty
+      $('#data_check_treatment_type').empty();
+
+      for (var i = 0; i < checked_treatment_types.length; i++){
+        $('#data_check_treatment_type').append(checked_treatment_types[i] + ", ");
+      };
+
       $('#data_check_button').prop('disabled', false);
     } else {
       $(this).removeClass('form-success').addClass('form-error');
