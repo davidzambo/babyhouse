@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url'] = 'http://localhost/dentalclinic';
-
+//$config['base_url'] = 'http://www.dcmf.hu';
 /*
 |--------------------------------------------------------------------------
 | Index File

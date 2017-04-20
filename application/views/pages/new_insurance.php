@@ -117,12 +117,12 @@
   <div class="form-group row tooth_quadrant">
     <label for="tooth_quadrant" class="col-lg-5 control-label">Kérem adja meg a <strong>fogazott kvadránst</strong>:</label>
     <div class="checkbox col-lg-2">
-       <label><input type="checkbox" class="tooth_quadrant" id="quadrant_top_left" name="quadrant_top_left" disabled="true" value="bal felső">Bal felső</label><br/>
-       <label><input type="checkbox" class="tooth_quadrant" id="quadrant_bottom_left" name="quadrant_bottom_left" disabled="true" value="bal alsó">Bal alsó</label>
+       <label><input type="checkbox" class="tooth_quadrant" id="quadrant_top_left" name="quadrants[]" disabled="true" value="bal felső">Bal felső</label><br/>
+       <label><input type="checkbox" class="tooth_quadrant" id="quadrant_bottom_left" name="quadrants[]" disabled="true" value="bal alsó">Bal alsó</label>
     </div>
     <div class="checkbox col-lg-2">
-       <label><input type="checkbox" class="tooth_quadrant" id="quadrant_top_right" name="quadrant_top_right" disabled="true" value="jobb felső">Jobb felső</label><br/>
-       <label><input type="checkbox" class="tooth_quadrant" id="quadrant_bottom_right" name="quadrant_bottom_right" disabled="true" value="jobb alsó">Jobb alsó</label>
+       <label><input type="checkbox" class="tooth_quadrant" id="quadrant_top_right" name="quadrants[]" disabled="true" value="jobb felső">Jobb felső</label><br/>
+       <label><input type="checkbox" class="tooth_quadrant" id="quadrant_bottom_right" name="quadrants[]" disabled="true" value="jobb alsó">Jobb alsó</label>
     </div>
     <div class="col-lg-3"></div>
   </div>
@@ -130,16 +130,16 @@
   <div class="form-group row treatment_type">
     <label for="treatment_type" class="col-lg-5 control-label">Kérem adja meg a <strong>kezelés típusát</strong>:</label>
     <div class="checkbox col-lg-5">
-      <label><input type="checkbox" class="treatment_type" id="treatment_implant" name="treatment_implant" value="implantátumok" disabled="true">Implantátumok</label><br/>
-      <label><input type="checkbox" class="treatment_type" id="treatment_crowns" name="treatment_crowns" value="koronák és hidak" disabled="true">Koronák és hidak</label><br/>
-      <label><input type="checkbox" class="treatment_type" id="treatment_inlay" name="treatment_inlay" value="inlay/onlay" disabled="true">Inlay/onlay</label><br/>
-      <label><input type="checkbox" class="treatment_type" id="treatment_veneers" name="treatment_veneers" value="kerámia héjak" disabled="true">Kerámia héjak</label><br/>
-      <label><input type="checkbox" class="treatment_type" id="treatment_partial_dentures" name="treatment_partial_dentures" value="részleges fogsor és műforgsor" disabled="true">Részleges fogsor és műfogsorok</label><br/>
-      <label><input type="checkbox" class="treatment_type" id="treatment_removable_dentures" name="treatment_removable_dentures" value="kivehető műfogsor" disabled="true">Kivehető műfogsor</label><br/>
-      <label><input type="checkbox" class="treatment_type" id="treatment_complete_dentures" name="treatment_complete_dentures" value="teljes fogsor, fix fogszabályzós" disabled="true">Teljes fogsor, fix fogszabályzós</label><br/>
-      <label><input type="checkbox" class="treatment_type" id="treatment_composite_fillings" name="treatment_composite_fillings" value="kompozit tömések" disabled="true">Kompozit tömések</label><br/>
-      <label><input type="checkbox" class="treatment_type" id="treatment_ot_cap" name="treatment_ot_cap" value="ot-cap, preci, és egyéb összekötő elemek" disabled="true">Ot-Cap, Preci, és egyéb összekötő elem</label><br/>
-      <label><input type="checkbox" class="treatment_type" id="treatment_other" name="treatment_other" value="egyéb módon történő kezelés" disabled="true">Egyéb módon történő kezelés</label><br/>
+      <label><input type="checkbox" class="treatment_type" id="treatment_implant" name="treatment_type[]" value="implantátumok" disabled="true">Implantátumok</label><br/>
+      <label><input type="checkbox" class="treatment_type" id="treatment_crowns" name="treatment_type[]" value="koronák és hidak" disabled="true">Koronák és hidak</label><br/>
+      <label><input type="checkbox" class="treatment_type" id="treatment_inlay" name="treatment_type[]" value="inlay/onlay" disabled="true">Inlay/onlay</label><br/>
+      <label><input type="checkbox" class="treatment_type" id="treatment_veneers" name="treatment_type[]" value="kerámia héjak" disabled="true">Kerámia héjak</label><br/>
+      <label><input type="checkbox" class="treatment_type" id="treatment_partial_dentures" name="treatment_type[]" value="részleges fogsor és műforgsor" disabled="true">Részleges fogsor és műfogsorok</label><br/>
+      <label><input type="checkbox" class="treatment_type" id="treatment_removable_dentures" name="treatment_type[]" value="kivehető műfogsor" disabled="true">Kivehető műfogsor</label><br/>
+      <label><input type="checkbox" class="treatment_type" id="treatment_complete_dentures" name="treatment_type[]" value="teljes fogsor, fix fogszabályzós" disabled="true">Teljes fogsor, fix fogszabályzós</label><br/>
+      <label><input type="checkbox" class="treatment_type" id="treatment_composite_fillings" name="treatment_type[]" value="kompozit tömések" disabled="true">Kompozit tömések</label><br/>
+      <label><input type="checkbox" class="treatment_type" id="treatment_ot_cap" name="treatment_type[]" value="ot-cap, preci, és egyéb összekötő elemek" disabled="true">Ot-Cap, Preci, és egyéb összekötő elem</label><br/>
+      <label><input type="checkbox" class="treatment_type" id="treatment_other" name="treatment_type[]" value="egyéb módon történő kezelés" disabled="true">Egyéb módon történő kezelés</label><br/>
     </div>
     <div class="col-lg-2"></div>
   </div>
