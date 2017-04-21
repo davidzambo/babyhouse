@@ -6,28 +6,44 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       parent::__construct();
       $this->load->model('insurances_model');
       $this->load->helper('url_helper');
+      $this->load->library('session');
     }
 
     public function index($page = 'welcome'){
-      $this->load->view('templates/header');
-      $this->load->view('clinics/navbar');
-      $this->load->view('clinics/'.$page);
-      $this->load->view('templates/footer');
 
+      if ($this->session->userdata('loginuser') == TRUE) {
+          $this->load->view('templates/header');
+          $this->load->view('clinics/navbar');
+          $this->load->view('clinics/'.$page);
+          $this->load->view('templates/footer');
+        } else {
+          redirect('login/index');
+        }
     }
 
     public function new_insurance(){
       $this->load->helper('form');
 
-      $this->load->view('templates/header');
-      $this->load->view('clinics/navbar');
-      $this->load->view('clinics/new_insurance');
-      $this->load->view('templates/footer');
+      if ($this->session->userdata('loginuser') == TRUE) {
+
+          $this->load->view('templates/header');
+          $this->load->view('clinics/navbar');
+          $this->load->view('clinics/new_insurance');
+          $this->load->view('templates/footer');
+      } else {
+          redirect('login/index');
+      }
 
     }
 
     public function new_patient(){
       $this->insurances_model->set_insurance();
+
+      $this->load->view('templates/header');
+      $this->load->view('clinics/navbar');
+      $this->load->view('clinics/success');
+      $this->load->view('templates/footer');
+
     }
 
     public function insurances(){

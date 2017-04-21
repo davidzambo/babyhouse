@@ -42,12 +42,30 @@
               } else {
                 $this->session->set_flashdata('message', '<div class="alert
                 alert-danger text-center"> Invalid username and password!</div>');
-                redirect('users/index');
+                redirect('login/error');
               }
             } else {
-              redirect('users/index');
+              redirect('login/error');
             }
           }
-  }
+      }
+
+    public function error(){
+      $this->load->view('templates/header');
+      $this->load->view('login/error');
+      $this->load->view('templates/footer');
+    }
+
+    public function logout(){
+      $data = array(
+        'username' => '',
+        'loginuser' => FALSE
+      );
+      //$this->session->unset_userdata($data);
+      $this->session->sess_destroy();
+      redirect('login/index');
+
+    }
+
 }
  ?>

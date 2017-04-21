@@ -1,5 +1,21 @@
 $(document).ready(function(){
 
+//change the "enter" key to behave as "tab"
+    $("input,select").bind("keydown", function (e) {
+        if (e.keyCode == 13) {
+            var allInputs = $("input,select");
+            for (var i = 0; i < allInputs.length; i++) {
+                if (allInputs[i] == this) {
+                    while ((allInputs[i]).name == (allInputs[i + 1]).name) {
+                        i++;
+                    }
+
+                    if ((i + 1) < allInputs.length) $(allInputs[i + 1]).focus();
+                }
+            }
+        }
+    });
+
   $("#personal_title").on("change", function(){
     if ($(this).val() === "default") {
       $('.personal_title').addClass('form-error').removeClass('form-success');
@@ -185,7 +201,7 @@ $(document).ready(function(){
   });
 
   $('#treatment_id_number').on("keyup", function(){
-    if (/^[\d]{5,20}$/.test($(this).val())){
+    if (/^[\w\W]{5,20}$/.test($(this).val())){
       $('.treatment_id_number').addClass('form-success').removeClass('form-error');
       $('#data_check_treatment_id_number').text($(this).val());
       $("#treatment_finish_date_year").prop('disabled', false);
@@ -225,7 +241,7 @@ $(document).ready(function(){
     var month = parseInt($('#treatment_finish_date_month').val());
     var day = parseInt($(this).val());
     var userGivenDate = new Date(new Date(year, month-1, day));
-    var thirtyDaysFromNow = new Date(new Date().setDate(new Date().getDate() + 30));
+    var fiveDaysBeforeNow = new Date(new Date().setDate(new Date().getDate() - 6));
 
     switch (month) {
       case 4:
@@ -248,8 +264,8 @@ $(document).ready(function(){
 //CHECKING IF THE TREATMENT FINISH DATE IS MAX 30 DAYS AFTER THE CURRENT DATE
     if (day > 0 &&
         day <= maxDaysInMonth &&
-        userGivenDate.getTime() <= thirtyDaysFromNow.getTime() &&
-        userGivenDate.getTime() > currentTime.getTime()
+        userGivenDate.getTime() >= fiveDaysBeforeNow.getTime()
+        // && userGivenDate.getTime() > currentTime.getTime()
       ){
       $('.treatment_finish_date').addClass('form-success').removeClass('form-error');
       $('#data_check_treatment_finish_date').text(

@@ -18,7 +18,7 @@
             <li><a href="<?php echo base_url(); ?>clinics/insurances" class="last">Lista generálás</a></li>
           </ul>
         </li>
-        <li><a href="#">Kijelentkezés</a></li>
+        <li><a href="<?php echo base_url(); ?>logout">Kijelentkezés</a></li>
       </ul>
     </nav>
   </div>

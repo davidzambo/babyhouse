@@ -20,9 +20,11 @@
 
                <div class="form-group row">
                  <div class="col-lg-4 col-sm-4">
+                   <br/>
                    <label for="password" class="control-label">jelszó:</label>
                  </div>
                  <div class="col-lg-8 col-sm-8">
+                      <br/>
                       <input class="form-control" id="password" name="password" placeholder="jelszó" type="password" value="<?php echo set_value('password'); ?>" />
                       <span class="text-danger"><?php echo form_error('password'); ?></span>
                  </div>

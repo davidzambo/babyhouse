@@ -296,3 +296,14 @@ label {
 .all-insurances .col-lg-6 p {
   margin: 3px;
 }
+
+.login-error {
+  position: relative;
+  top: 100px;
+  width: inherit;
+  height: 280px;
+  background-color: pink;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 0 auto;
+}
