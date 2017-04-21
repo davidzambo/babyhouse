@@ -33,6 +33,19 @@ class Insurances_model extends CI_model {
     return $this->db->insert('patients', $data);
   }
 
+
+  public function get_insurances(){
+    $this->load->helper('url');
+
+    $this->db->select('*');
+    $this->db->from('patients');
+    $query = $this->db->get();
+
+    return $query->result();
+  }
+
+
+
 }
 
 /*    $data = array(

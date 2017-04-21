@@ -63,7 +63,7 @@ ul#navigation li {
 
 ul#navigation li a {
   padding: 10px 15px;
-  width: 140px;
+  width: 180px;
   color: black;
   text-shadow: 1px 1px 0px #fff;
   text-decoration: none;
@@ -284,4 +284,15 @@ label {
   background-color: #77ff77;
 /*  border: 1px solid green;
   padding: 2px;*/
+}
+
+/*style for insurance list generation*/
+.all-insurances {
+  background-color: #f2f2ec;
+  border-radius: 7px;
+  padding-left: 20px;
+}
+
+.all-insurances .col-lg-6 p {
+  margin: 3px;
 }
