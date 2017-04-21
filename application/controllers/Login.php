@@ -52,6 +52,7 @@
 
     public function error(){
       $this->load->view('templates/header');
+      $this->load->view('login/login');
       $this->load->view('login/error');
       $this->load->view('templates/footer');
     }

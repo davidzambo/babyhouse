@@ -137,10 +137,6 @@ img {
   float: left;
 }
 
-.col-lg-2 {
-  text-align: center;
-}
-
 #index_title {
   text-align: center;
   font-size: 3em;
@@ -170,7 +166,7 @@ img {
   font-size: 1.4em;
   margin-bottom: 10px;
 }
-/*
+
 .form-horizontal input[type="text"],
 .form-horizontal input[type="email"],
 .form-horizontal input[type="number"],
@@ -181,18 +177,19 @@ img {
 .form-horizontal select {
     background: rgba(255,255,255,.1);
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     margin: 0;
     outline: 0;
     padding: 7px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    background-color: #e8eeef;
-    color:#8a97a0;
+    background-color: #fff;
+    color:#545454;
     -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
     box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
 }
+
 
 .form-horizontal input[type="text"]:focus,
 .form-horizontal input[type="date"]:focus,
@@ -204,10 +201,14 @@ img {
 .form-horizontal input[type="url"]:focus,
 .form-horizontal textarea:focus,
 .form-horizontal select:focus{
-    background: #d2d9dd;
+    background: white;
+    border-color: #66afe9;
+   outline: 0;
+   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 
-*/
+
 .form-horizontal select{
     -webkit-appearance: menulist-button;
     height:35px;
@@ -215,6 +216,9 @@ img {
 
 .form-group {
   border-bottom: 1px solid #959595;
+
+  display: flex;
+  align-items: center;
 }
 
 .col-lg-7 .row img {
@@ -231,14 +235,13 @@ label {
 }
 
 .data-check {
-  border: 1px solid black;
+  border: 1px solid #959595;
   border-radius: 5px;
   background-color: white;
 }
 
-.data-check p {
-  padding: 0;
-  margin: 0;
+.data-check span {
+  padding: 7px;
 }
 
 /*for main index page*/
@@ -260,11 +263,12 @@ label {
 }
 
 .button {
-  width: 25%;
+  width: 100%;
+  max-width: 180px;
   background-color: #002DB2;
   font-size: 1em;
   color: white;
-  display: inline-block;
+  display: inline;
   margin: 0 auto;
   height: 50px;
   border-radius: 15px;
@@ -281,14 +285,14 @@ label {
 }
 
 .form-success {
-  background-color: #77ff77;
+  background-color: rgba(0,255,0,0.1);
 /*  border: 1px solid green;
   padding: 2px;*/
 }
 
 /*style for insurance list generation*/
 .all-insurances {
-  background-color: #f2f2ec;
+  background-color: rgba(255,0,0,0.1);
   border-radius: 7px;
   padding-left: 20px;
 }
@@ -298,12 +302,9 @@ label {
 }
 
 .login-error {
-  position: relative;
-  top: 100px;
-  width: inherit;
-  height: 280px;
+  width: 50%;
   background-color: pink;
   border-radius: 5px;
   padding: 20px;
-  margin: 0 auto;
+  margin-left: 25%;
 }

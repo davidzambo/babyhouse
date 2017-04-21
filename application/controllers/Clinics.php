@@ -21,6 +21,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         }
     }
 
+    private function insurance_offer_code(){
+      $random_chars = substr(str_shuffle(str_repeat("ABCDEFGHIJKLMNOPQRTUVWXYZ", 5)), 0, 2);
+      $random_numbers = substr(str_shuffle(str_repeat("0123456789", 5)), 0, 6);
+      $random_id = ($random_chars . "-" . $random_numbers);
+      return $random_id;
+    }
+
+
     public function new_insurance(){
       $this->load->helper('form');
 

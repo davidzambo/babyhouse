@@ -28,7 +28,7 @@ $(document).ready(function(){
   });
 
   $('#last_name').on("keyup", function(){
-    if (/^[a-zA-Z\-\.\sáÁéÉíÍóÓöÖőŐúÚüÜűŰ]{2,20}$/.test($(this).val())){
+    if (/^[a-zA-Z\-\.\säáÁéÉíÍóÓöÖőŐúÚüÜűŰ]{2,20}$/.test($(this).val())){
       $('.last_name').addClass('form-success').removeClass('form-error');
       $('#data_check_last_name').text($(this).val());
       $("#first_name").prop('disabled', false);
@@ -39,7 +39,7 @@ $(document).ready(function(){
   });
 
   $('#first_name').on("keyup", function(){
-    if (/^[a-zA-Z\-\.\sáÁéÉíÍóÓöÖőŐúÚüÜűŰ]{2,20}$/.test($(this).val())){
+    if (/^[a-zA-Z\-\.\säáÁéÉíÍóÓöÖőŐúÚüÜűŰ]{2,20}$/.test($(this).val())){
       $('.first_name').addClass('form-success').removeClass('form-error');
       $('#data_check_first_name').text($(this).val());
       $("#birth_date_year").prop('disabled', false);
@@ -201,7 +201,7 @@ $(document).ready(function(){
   });
 
   $('#treatment_id_number').on("keyup", function(){
-    if (/^[\w\W]{5,20}$/.test($(this).val())){
+    if (/^[\w\W]{1,20}$/.test($(this).val())){
       $('.treatment_id_number').addClass('form-success').removeClass('form-error');
       $('#data_check_treatment_id_number').text($(this).val());
       $("#treatment_finish_date_year").prop('disabled', false);
@@ -261,11 +261,11 @@ $(document).ready(function(){
           maxDaysInMonth = 31;
     };
 
-//CHECKING IF THE TREATMENT FINISH DATE IS MAX 30 DAYS AFTER THE CURRENT DATE
+//CHECKING IF THE TREATMENT FINISH DATE IS MAX 5 DAYS AFTER THE CURRENT DATE
     if (day > 0 &&
         day <= maxDaysInMonth &&
         userGivenDate.getTime() >= fiveDaysBeforeNow.getTime()
-        // && userGivenDate.getTime() > currentTime.getTime()
+         && userGivenDate.getTime() <= currentTime.getTime()
       ){
       $('.treatment_finish_date').addClass('form-success').removeClass('form-error');
       $('#data_check_treatment_finish_date').text(
@@ -325,6 +325,41 @@ $(document).ready(function(){
       $('#data_check_button').prop('disabled', true);
     };
   });
+
+  $('#data_check_button').on('click', function(){
+    $(this).parent().parent().addClass('form-success');
+    $('#accept_insurance_conditions').prop('disabled', false);
+  });
+
+  $('#accept_insurance_conditions').on('change', function(){
+    if(this.checked){
+      $(this).parent().parent().parent().addClass('form-success');
+      $('#sms_send').prop('disabled', false);
+      $('#email_send').prop('disabled', false);
+    } else {
+      $(this).addClass('form-error');
+      $('#sms_send').prop('disabled', true);
+      $('#email_send').prop('disabled', true);
+    }});
+
+  $('#sms_send, #email_send').on('click', function(){
+    $(this).parent().parent().parent().addClass('form-success');
+    $('#insurance_id_code').prop('disabled', false);
+  });
+
+  $('#insurance_id_code').on("keyup", function(){
+    if (/^[\w]{2}-[\d]{6}$/.test($(this).val())){
+      $(this).addClass('form-success').removeClass('form-error');
+      $("#generate_pdf").prop('disabled', false);
+      $("#save_insurance").prop('disabled', false);
+    } else {
+      $(this).addClass('form-success').removeClass('form-error');
+      $("#generate_pdf").prop('disabled', false);
+      $("#save_insurance").prop('disabled', false);
+    };
+  });
+
+
 
 
 });
