@@ -36,7 +36,6 @@ body {
 /* Define the navbar style */
 #nav {
   position: relative;
-  width: 100%;
   font-size: 1em;
   margin: 0 auto;
   padding: 10px;
@@ -63,7 +62,7 @@ ul#navigation li {
 
 ul#navigation li a {
   padding: 10px 15px;
-  width: 180px;
+  width: 170px;
   color: black;
   text-shadow: 1px 1px 0px #fff;
   text-decoration: none;
@@ -173,6 +172,7 @@ img {
 .form-horizontal input[type="search"],
 .form-horizontal input[type="time"],
 .form-horizontal input[type="url"],
+.form-horizontal input[type="password"],
 .form-horizontal textarea,
 .form-horizontal select {
     background: rgba(255,255,255,.1);
@@ -216,9 +216,12 @@ img {
 
 .form-group {
   border-bottom: 1px solid #959595;
-
   display: flex;
   align-items: center;
+}
+
+.form-group.login {
+  display: block;
 }
 
 .col-lg-7 .row img {

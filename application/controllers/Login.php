@@ -17,6 +17,8 @@
       $username = $this->input->post('username');
       $password = $this->input->post('password');
 
+      $data['current_user'] = $this->login_model->get_user($username, $password);
+
       $this->form_validation->set_rules('username', 'Username', "trim|required");
       $this->form_validation->set_rules('password', 'Password', "trim|required");
 
@@ -31,9 +33,13 @@
           if ($this->input->post('btn_login') == 'belépés'){
 
               $user_result = $this->login_model->get_user($username, $password);
-              if ($user_result > 0) {
+              if (isset($user_result)) {
                 $sessiondata = array(
                   'username' => $username,
+                  'email' => $data['current_user']->email,
+                  'phone_number' => $data['current_user']->phone_number,
+                  'first_name' => $data['current_user']->first_name,
+                  'last_name' => $data['current_user']->last_name,
                   'loginuser' => TRUE
                 );
 

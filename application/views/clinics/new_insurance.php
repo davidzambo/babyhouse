@@ -205,7 +205,7 @@
     </div>
     <div class="col-lg-2"></div>
     <div class="col-lg-3">
-        <button type="button" class="button" id="save_insurance" name="save_insurance" disabled="true">Biztosítási ajánlat beküldése</button>
+        <button type="submit" class="button" id="save_insurance" name="save_insurance" disabled="true">Biztosítási ajánlat beküldése</button>
     </div>
     <div class="col-lg-2"></div>
   </div>

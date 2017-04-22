@@ -11,7 +11,7 @@
           password = '" . hash('sha256', $password) . "'";
 
         $query = $this->db->query($sql);
-        return $query->num_rows();
+        return $query->row();
       }
 
   }

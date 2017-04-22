@@ -5,25 +5,25 @@
           $attributes = array("class" => "form-horizontal", "id" => "loginform", "name" => "loginform");
           echo form_open("login/index", $attributes);?>
           <fieldset class="field_set">
-               <legend>Bejelentkezés</legend>
-               <div class="form-group">
+               <legend>Bejelentkezés partner klinikák részére</legend>
+               <div class="form-group login">
                <div class="row colbox">
                <div class="col-lg-4 col-sm-4">
                     <label for="username" class="control-label">felhasználónév:</label>
                </div>
-               <div class="col-lg-8 col-sm-8">
+               <div class="col-lg-8">
                     <input class="form-control" id="username" name="username" placeholder="felhasználónév" type="text" value="<?php echo set_value('username'); ?>" />
                     <span class="text-danger"><?php echo form_error('username'); ?></span>
                </div>
                </div>
                </div>
 
-               <div class="form-group row">
+               <div class="form-group login row">
                  <div class="col-lg-4 col-sm-4">
                    <br/>
                    <label for="password" class="control-label">jelszó:</label>
                  </div>
-                 <div class="col-lg-8 col-sm-8">
+                 <div class="col-lg-8">
                       <br/>
                       <input class="form-control" id="password" name="password" placeholder="jelszó" type="password" value="<?php echo set_value('password'); ?>" />
                       <span class="text-danger"><?php echo form_error('password'); ?></span>
