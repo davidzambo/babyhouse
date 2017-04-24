@@ -85,19 +85,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       $data['email_message'] = "A rendszerünk által generált ajánlatszám: ".$data['insurance_offer_code'];
       $data['user_email'] = $this->session->userdata('email');
 
-      $this->email->from('david.a.zambo@gmail.com', 'FogászatiBiztosítás.hu');
+      $this->email->from('postmaster@dcmf.hu', 'FogászatiBiztosítás.hu');
       $this->email->to($data['user_email']);
       $this->email->subject('Biztosítási ajánlatszám');
       $this->email->message($data['email_message']);
 
       $this->email->send();
-/* Code for testing
+// Code for testing
       if ($this->email->send()){
         echo "Mail Sent!";
       } else {
         echo "There is error in sending mail!";
       }
-      */
+
     }
 
 
