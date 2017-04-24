@@ -333,11 +333,11 @@ $(document).ready(function(){
 
   $('#accept_insurance_conditions').on('change', function(){
     if(this.checked){
-      $(this).parent().parent().parent().addClass('form-success');
+      $(this).parent().parent().parent().addClass('form-success').removeClass('form-error');
       $('#sms_send').prop('disabled', false);
       $('#email_send').prop('disabled', false);
     } else {
-      $(this).addClass('form-error');
+      $(this).parent().parent().parent().addClass('form-error').removeClass('form-success');
       $('#sms_send').prop('disabled', true);
       $('#email_send').prop('disabled', true);
     }});
@@ -348,14 +348,14 @@ $(document).ready(function(){
   });
 
   $('#insurance_id_code').on("keyup", function(){
-    if (/^[\w]{2}-[\d]{6}$/.test($(this).val())){
-      $(this).addClass('form-success').removeClass('form-error');
+    if ($(this).val() === insurance_offer_code){
+      $(this).parent().parent().addClass('form-success').removeClass('form-error');
       $("#generate_pdf").prop('disabled', false);
       $("#save_insurance").prop('disabled', false);
     } else {
-      $(this).addClass('form-success').removeClass('form-error');
-      $("#generate_pdf").prop('disabled', false);
-      $("#save_insurance").prop('disabled', false);
+      $(this).parent().parent().removeClass('form-success').addClass('form-error');
+      $("#generate_pdf").prop('disabled', true);
+      $("#save_insurance").prop('disabled', true);
     };
   });
 

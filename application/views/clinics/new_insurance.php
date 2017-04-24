@@ -1,5 +1,4 @@
 <script src="<?php echo base_url(); ?>assets/js/formvalidation.js"></script>
-
 <div class="row">
   <div class="col-lg-2"></div>
   <div class="col-lg-8">

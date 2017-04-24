@@ -38,6 +38,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 //check the database, if it exists, generate a new one
       while ($this->insurances_model->is_insurance_offer_code_unique($data['insurance_offer_code']) != 0);
 
+      $this->session->set_userdata('insurance_offer_code', $data['insurance_offer_code']);
+
       return $data['insurance_offer_code'];
     }
 
@@ -47,6 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
       if ($this->session->userdata('loginuser') == TRUE) {
 
+          $this->generate_insurance_offer_code();
           $this->load->view('templates/header');
           $this->load->view('clinics/navbar');
           $this->load->view('clinics/new_insurance');
@@ -78,7 +81,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     public function send_insurance_offer_code_by_email(){
       $this->load->library('email');
 
-      $data['insurance_offer_code'] = $this->generate_insurance_offer_code();
+      $data['insurance_offer_code'] = $this->session->userdata('insurance_offer_code');
       $data['email_message'] = "A rendszerünk által generált ajánlatszám: ".$data['insurance_offer_code'];
       $data['user_email'] = $this->session->userdata('email');
 
@@ -87,11 +90,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       $this->email->subject('Biztosítási ajánlatszám');
       $this->email->message($data['email_message']);
 
+      $this->email->send();
+/* Code for testing
       if ($this->email->send()){
         echo "Mail Sent!";
       } else {
         echo "There is error in sending mail!";
       }
+      */
     }
 
 

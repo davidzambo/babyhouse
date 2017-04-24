@@ -8,6 +8,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       $this->load->helper('url_helper');
     }
 
-    public function get_user(){}
-
   }

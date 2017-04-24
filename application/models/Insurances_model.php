@@ -27,7 +27,8 @@ class Insurances_model extends CI_model {
                                  $this->input->post('treatment_finish_date_month').'/'.
                                  $this->input->post('treatment_finish_date_day'),
       'quadrants' => $data['quadrants'],
-      'treatment_type' => $data['treatment_type']
+      'treatment_type' => $data['treatment_type'],
+      'insurance_offer_code' => $this->input->post('insurance_id_code')
     );
 
     return $this->db->insert('patients', $data);
@@ -37,7 +38,7 @@ class Insurances_model extends CI_model {
   public function is_insurance_offer_code_unique($temporary_code){
     $this->load->helper('url');
 
-    $this->db->select('*');
+    $this->db->select('id');
     $this->db->from('patients');
     $this->db->where('insurance_offer_code',$temporary_code);
     $query = $this->db->get();
@@ -46,5 +47,10 @@ class Insurances_model extends CI_model {
   }
 
 
+  public function get_insurances(){
+    $sql = "SELECT * FROM patients";
+    $query = $this->db->query($sql);
+    return $query->result();
+  }
 
 }
