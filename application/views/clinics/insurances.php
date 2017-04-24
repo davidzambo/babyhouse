@@ -1,6 +1,7 @@
 <div class="row">
   <div class="col-lg-2"></div>
     <div class="col-lg-8 all-insurances">
+      <h2>Rögzített biztosítási ajánlatok:</h2>
       <table>
       <?php foreach ($insurances as $insurance): ?>
           <tr>
@@ -33,8 +34,12 @@
             <td>Biztosítás ajánlatszáma:</td>
             <td><?php echo $insurance->insurance_offer_code; ?></td>
           </tr>
+          <tr>
+            <td colspan="4"><br/><br/></td>
+          </tr>
+
       <?php endforeach; ?>
-    </table>
+      </table>
     </div>
-  </div>
+<div class="col-lg-2"></div>
 </div>

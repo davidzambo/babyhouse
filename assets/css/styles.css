@@ -294,15 +294,7 @@ label {
 }
 
 /*style for insurance list generation*/
-.all-insurances {
-  background-color: rgba(255,0,0,0.1);
-  border-radius: 7px;
-  padding-left: 20px;
-}
 
-.all-insurances .col-lg-6 p {
-  margin: 3px;
-}
 
 .login-error {
   width: 50%;
@@ -311,3 +303,34 @@ label {
   padding: 20px;
   margin-left: 25%;
 }
+
+/*insurance list table style*/
+.all-insurances {
+  background-color: #f2f2ec;
+  border-radius: 7px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.all-insurances .col-lg-6 p {
+  margin: 3px;
+}
+
+table {
+  border: 0px;
+}
+
+tr, td {
+  min-width: 25%;
+  max-height: 25%;
+  border: 0px;
+  display: flex;
+  align-self: flex-start;
+  flex-wrap: nowrap;
+}
+
+tr:nth-child(even) {background: #f2f2ec}
+tr:nth-child(odd) {background: #c0c0c0}
+
+td:nth-child(even) {text-align: left}
+td:nth-child(odd) {text-align: right}

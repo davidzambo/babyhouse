@@ -50,7 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       if ($this->session->userdata('loginuser') == TRUE) {
 
           $this->generate_insurance_offer_code();
-          $this->load->view('templates/header');
+          $this->load->view('templates/new_insurance_header');
           $this->load->view('clinics/navbar');
           $this->load->view('clinics/new_insurance');
           $this->load->view('templates/footer');

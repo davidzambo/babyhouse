@@ -3,7 +3,7 @@
   <div class="col-lg-10">
     <nav id="nav">
       <ul id="navigation">
-        <li><a href="<?php echo base_url(); ?>clinics/index" class="first" class="first">Adminisztráció</a>
+        <li><a href="<?php echo base_url(); ?>clinics/index" class="first">Adminisztráció</a>
           <ul>
             <li><a href="<?php echo base_url(); ?>clinics/user">Felhasználó</a></li>
             <li><a href="#">Fogászati törzsadatok</a></li>

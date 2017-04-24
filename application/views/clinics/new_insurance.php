@@ -13,8 +13,8 @@
     <div class="col-lg-3">
       <select class="form-control" id="personal_title" name="personal_title" required="true">
         <option value="default">Kérem válasszon!</option>
-        <option value="holgyem">Hölgyem</option>
-        <option value="uram">Uram</option>
+        <option value="Hölgy">Hölgyem</option>
+        <option value="Úr">Uram</option>
       </select>
     </div>
     <div class="col-lg-4"></div>
@@ -51,36 +51,36 @@
       <div class="col-lg-4">
         <select class="form-control" id="country_select" name="country_select" disabled="true" required="true">
           <option value="default">Kérem válasszon!</option>
-          <option value="magyarorszag">Magyarország</option>
-          <option value="ausztria">Ausztria</option>
-          <option value="belgium">Belgium</option>
-          <option value="ciptrus">Ciprus</option>
-          <option value="csehorszag">Csehország</option>
-          <option value="dania">Dánia</option>
-          <option value="egyesult_kiralysag">Egyesült Királyság</option>
-          <option value="esztorszag">Észtország</option>
-          <option value="finnorszag">Finnország</option>
-          <option value="franciaorszag">Franciaország</option>
-          <option value="gorogorszag">Görögország</option>
-          <option value="hollandia">Hollandia</option>
-          <option value="horvatorszag">Horvátország</option>
-          <option value="irorszag">Írország</option>
+          <option value="Magyarország">Magyarország</option>
+          <option value="Ausztria">Ausztria</option>
+          <option value="Belgium">Belgium</option>
+          <option value="Ciprus">Ciprus</option>
+          <option value="Csehorszag">Csehország</option>
+          <option value="Dánia">Dánia</option>
+          <option value="Egyesült Királyság">Egyesült Királyság</option>
+          <option value="Észtország">Észtország</option>
+          <option value="Finnorszag">Finnország</option>
+          <option value="Franciaország">Franciaország</option>
+          <option value="Görögország">Görögország</option>
+          <option value="Hollandia">Hollandia</option>
+          <option value="Horvátország">Horvátország</option>
+          <option value="Írország">Írország</option>
           <option value="izland">Izland</option>
-          <option value="lengyelország">Lengyelország</option>
-          <option value="lettorszag">Lettország</option>
-          <option value="liechtenstein">Liechtenstein</option>
-          <option value="litvania">Litvánia</option>
-          <option value="luxemburg">Luxemburg</option>
-          <option value="malta">Málta</option>
-          <option value="nemetorszag">Németország</option>
-          <option value="norvegia">Norvégia</option>
-          <option value="olaszorszag">Olaszország</option>
-          <option value="portugalia">Portugália</option>
-          <option value="romania">Románia</option>
-          <option value="spanyolország">Spanyolország</option>
-          <option value="svedorszag">Svédország</option>
-          <option value="szlovakia">Szlovákia</option>
-          <option value="szlovenia">Szlovénia</option>
+          <option value="Lengyelország">Lengyelország</option>
+          <option value="Lettország">Lettország</option>
+          <option value="Liechtenstein">Liechtenstein</option>
+          <option value="Litvania">Litvánia</option>
+          <option value="Luxemburg">Luxemburg</option>
+          <option value="Málta">Málta</option>
+          <option value="Németország">Németország</option>
+          <option value="Norvégia">Norvégia</option>
+          <option value="Olaszország">Olaszország</option>
+          <option value="Portugália">Portugália</option>
+          <option value="Románia">Románia</option>
+          <option value="Spanyolország">Spanyolország</option>
+          <option value="Svédország">Svédország</option>
+          <option value="Szlovákia">Szlovákia</option>
+          <option value="Szlovénia">Szlovénia</option>
         </select>
       </div>
       <div class="col-lg-3"></div>
